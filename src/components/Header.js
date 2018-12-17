@@ -29,7 +29,7 @@ class Header extends React.Component {
                   <NavLink to="/dining" activeClassName="is-active">
                     Dining
                   </NavLink>
-                </li>    
+                </li>
               </ul>
             </div>
           </div>
