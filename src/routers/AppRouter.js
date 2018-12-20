@@ -9,7 +9,8 @@ import DiningPage from "../components/DiningPage";
 import Footer from "../components/Footer";
 import AboutPage from "../components/Info/AboutPage";
 import ContactPage from "../components/Info/ContactPage";
-
+import Room from "../components/Hotel/Room";
+import Menus from "../components/Menus/Menu";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -23,6 +24,8 @@ const AppRouter = () => (
         <Route path="/dining" component={DiningPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/room" component={Room} />
+        <Route path="/menus" component={Menus} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

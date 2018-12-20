@@ -9,6 +9,17 @@ const DiningPage = () => (
         <h1 className="box-layout__title">le Cafe des Grille</h1>
         <p>Chef Barasso from breakfast to Last night dining.</p>
       </div>
+      <ul>
+        <li>
+          <NavLink
+            className="header__title"
+            to="/menus"
+            activeClassName="is-active"
+          >
+            <h3>Menus </h3>
+          </NavLink>
+        </li>
+      </ul>
     </div>
   </div>
 );

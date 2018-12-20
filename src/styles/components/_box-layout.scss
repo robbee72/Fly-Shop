@@ -1,68 +1,84 @@
 .box-layout {
-    align-items: center;
-    background: url("/images/thefloat.jpg") top right no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100vw;
-  }
-  
-  .box-layout__frame {
-    align-items: center;
-    background: url("/images/breakfast.jpg") no-repeat center;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100vw;
-  }
-  .box-layout__hotelroom {
-    align-items: center;
-    background: url("/images/hotel-room.jpg") no-repeat center;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100vw;
-  }
-  
-  .box-layout__shop {
-    color: $black;
-    align-items: center;
-    background: url("/images/thereel.jpg") no-repeat center;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100vw;
-  }
-  .box-layout__box {
-    background: fade-out(white, 0.15);
-    border-radius: 3px;
-    padding: $l-size $m-size;
-    text-align: center;
-    width: 25rem;
-  }
-  
-  .box-layout__mouseybox {
-    display: flex;
-    font-size: 20px;
-    padding-bottom: 40px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .box-layout__title {
-    color: $black;
-    margin: 0 0 $m-size 0;
-    line-height: 1;
-  }
-  
+  align-items: center;
+  background: url("/images/thefloat.jpg") top right no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box-layout__frame {
+  align-items: center;
+  background: url("/images/breakfast.jpg") no-repeat center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.box-layout__hotelroom {
+  align-items: center;
+  background: url("/images/hotel-room.jpg") no-repeat center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.box-layout__room {
+  align-items: center;
+  background: url("/images/room2.jpg") no-repeat center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.box-layout__shop {
+  color: $black;
+  align-items: center;
+  background: url("/images/thereel.jpg") no-repeat center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.box-layout__box {
+  background: fade-out(white, 0.15);
+  border-radius: 3px;
+  padding: $l-size $m-size;
+  text-align: center;
+  width: 25rem;
+}
+
+.box-layout__box2 {
+  background: fade-out(#78dbdf, 0.15);
+  border-radius: 3px;
+  padding: $l-size $m-size;
+  text-align: center;
+  width: 35rem;
+}
+.box-layout__mouseybox {
+  display: flex;
+  font-size: 20px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-layout__title {
+  color: $black;
+  text-align: center;
+  margin: 0 0 $m-size 0;
+  line-height: 1;
+}
