@@ -6,11 +6,11 @@ import LandingPage from "../components/LandingPage";
 import ShopPage from "../components/ShopPage";
 import HotelPage from "../components/HotelPage";
 import DiningPage from "../components/DiningPage";
-import Footer from "../components/Footer";
+//import Footer from "../components/Footer";
 import AboutPage from "../components/Info/AboutPage";
 import ContactPage from "../components/Info/ContactPage";
 import Room from "../components/Hotel/Room";
-import Menus from "../components/Menus/Menu";
+import Menu from "../components/Comments/Menu";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -25,10 +25,9 @@ const AppRouter = () => (
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/room" component={Room} />
-        <Route path="/menus" component={Menus} />
+        <Route path="/menu" component={Menu} />
         <Route component={NotFoundPage} />
       </Switch>
-      <Footer />
     </div>
   </BrowserRouter>
 );

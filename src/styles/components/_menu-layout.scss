@@ -1,0 +1,107 @@
+.parent {
+  margin: inherit;
+  padding: 2 px;
+}
+
+.col-left {
+  flex: 2;
+  padding: 4px;
+  background-color: bisque;
+  opacity: 0.8;
+}
+.col-mid {
+  flex: 1;
+  padding: 4px;
+  background-color: bisque;
+  opacity: 0.8;
+}
+
+.col-right {
+  flex: 1;
+  padding: 4px;
+  background-color: bisque;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 641px) {
+  .parent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .parent {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.fm-lo__box {
+  background: url("/images/coffee-morning-breakfast-croissant.jpg") no-repeat
+    center;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: inherit;
+  display: flex;
+  border-radius: 3px;
+  padding: $m-size;
+  text-align: center;
+  height: 65%;
+  width: 85rem;
+}
+.fm-lo__header {
+  color: black;
+  font-size: 2em;
+  font-family: Palatino, URW Palladio L, serif;
+  text-align: left;
+  padding: 2em, 0.05em, 0, 2em;
+  padding-bottom: 0.5em;
+  margin: 0 0 0;
+  line-height: 1;
+}
+.fm-lo__title {
+  color: black;
+  font-size: 2em;
+  font-family: Palatino, URW Palladio L, serif;
+  text-align: left;
+  padding: 2em, 0.05em, 0, 2em;
+  padding-bottom: 0.5em;
+  margin: 0 0 0;
+  line-height: 1;
+}
+.fm-lo__subtitle {
+  color: black;
+  font-size: 1em;
+  font-family: Palatino, URW Palladio L, serif;
+  text-align: left;
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+  margin: 0 0 0;
+  line-height: 1;
+}
+
+.fm-lo__fm {
+  color: black;
+  font-size: 0.2em;
+  font-family: Palatino, URW Palladio L, serif;
+  text-align: left;
+  padding-left: 2em;
+  padding-bottom: 1.5em;
+  margin: 0 0 0;
+  line-height: 1;
+}
+
+.fm-lo__price {
+  color: #385491;
+  font-size: 0.7em;
+  font-family: Palatino, URW Palladio L, serif;
+  text-align: left;
+  padding-left: 2em;
+  padding-bottom: 1.5em;
+  margin: 0 0 0;
+  line-height: 1;
+}

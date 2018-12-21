@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const ShopPage = () => (
-  <div className="box-layout__shop">
+  <div className="box-lo__shop">
     <div className="content__content">
       <NavLink className="header__title" to="/" />
 
