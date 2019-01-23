@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BreakfastForm from "./MenuForm";
 
 const BreakfastMenu = () => (
@@ -7,7 +7,7 @@ const BreakfastMenu = () => (
     <div className="fm-lo__header">Breakfast</div>
 
     <div className="fm-lo__box">
-      <NavLink className="header__title" to="/" />
+      <Link className="header__title" to="/" />
 
       <BreakfastForm />
     </div>

@@ -41,7 +41,6 @@
   width: 100vw;
 }
 .box-lo__shop {
-  color: $black;
   align-items: center;
   background: url("/images/thereel.jpg") no-repeat center;
   background-position: center;
@@ -52,6 +51,16 @@
   width: 100vw;
 }
 
+.box-lo__cart {
+  align-items: center;
+  background: url("/images/grfloat.jpg") no-repeat center;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
 .box-lo__box {
   background: fade-out(white, 0.15);
   border-radius: 3px;
@@ -61,17 +70,16 @@
 }
 
 .box-lo__dine:hover:not(.active) {
-  box-shadow: inset 0 0 0 0px $light-aqua;
+  box-shadow: inset 0 0 0 3px $kelly-green;
   opacity: 0.5;
   color: #793c24;
-  align-content: center;
-  display: flex;
+  text-align: center;
   font-size: 15px;
 }
 
 .box-lo__title {
   color: $black;
   text-align: center;
-  margin: 0 0 $m-size 0;
-  line-height: 1;
+  text-decoration: none;
+  margin: 0 0 0;
 }

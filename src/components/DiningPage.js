@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const DiningPage = () => (
   <div className="box-lo__frame">
@@ -9,17 +9,9 @@ const DiningPage = () => (
         <h1 className="box-lo__title">le Cafe des Grille</h1>
         <p>Chef Barasso from breakfast to Last night dining.</p>
       </div>
-      <ul>
-        <li>
-          <NavLink
-            className="box-lo__dine"
-            to="/menu"
-            activeClassName="is-active"
-          >
-            <h3>Menus </h3>
-          </NavLink>
-        </li>
-      </ul>
+      <Link to="/menu">
+        <h3>Menus </h3>
+      </Link>
     </div>
   </div>
 );

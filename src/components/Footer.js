@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export const Footer = () => (
+const Footer = () => (
   <footer className="footer">
     <div className="content-container">
       <div className="footer__content">

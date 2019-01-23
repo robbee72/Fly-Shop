@@ -4,10 +4,26 @@ import Footer from "../components/Footer";
 
 const LandingPage = () => (
   <div className="box-lo">
-    <div className="box-lo__box">
+    <div className="content__content">
       <NavLink className="header__title" to="/" />
-      <h1 className="box-lo__title">Fish On.</h1>
-      <p>Roaring Fork Valley fly fishing since 1988.</p>
+
+      <div className="card">
+        <div className="card__content">
+          <div className="card__front">
+            <h3 className="card__title">Fish On.</h3>
+            <p className="card__subtitle">
+              Roaring Fork Valley fly fishing since 1988
+            </p>
+          </div>
+
+          <div className="card__back">
+            <p className="card__body">
+              I was once told to be reasonable. Yet only unreasonable men change
+              things” -- unknown
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <Footer />
   </div>
