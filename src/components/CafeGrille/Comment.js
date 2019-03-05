@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 class EssayForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "Start Here."
+      value: 'Start Here.'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -16,7 +16,7 @@ class EssayForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("An essay was submitted: " + this.state.value);
+    alert('An essay was submitted: ' + this.state.value);
     event.preventDefault();
   }
 

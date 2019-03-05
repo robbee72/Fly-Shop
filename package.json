@@ -1,28 +1,35 @@
 {
-  "name": "react-aws-test",
+  "name": "fly-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@types/react-router-dom": "^4.3.1",
+    "firebase": "^5.8.2",
+    "lodash": "^4.17.11",
     "moment": "^2.23.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.8.0",
     "react-country-region-selector": "^1.4.3",
     "react-datepicker": "^2.0.0",
-    "react-dom": "^16.6.3",
+    "react-dom": "^16.8.0",
+    "react-firebaseui": "3.1.2",
     "react-flexbox-grid": "^2.1.2",
-    "react-redux": "^6.0.0",
+    "react-google-login": "^5.0.0",
+    "react-moment": "^0.8.4",
+    "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "react-stripe-elements": "^2.0.1",
+    "react-toolbox": "^2.0.0-beta.13",
     "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clean": "rm -rf ./public/bundle.* ./src/firebase-config.json ./node_modules",
+    "build": "npm run clean && npm run createfirebaseconf; NODE_ENV=production webpack -p;",
+    "createfirebaseconf": "firebase setup:web --json > ./src/firebase-config.json",
+    "serve": "firebase serve"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,10 +41,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "prettier": "1.16.3",
     "react-scripts": "^2.1.2"
   }
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Footer from "../components/Footer";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const LandingPage = () => (
   <div className="box-lo">

@@ -1,30 +1,36 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import NotFoundPage from "../components/NotFoundPage";
-import Header from "../components/Header";
-import LandingPage from "../components/LandingPage";
-import ShopPage from "../components/ShopPage";
-import HotelPage from "../components/HotelPage";
-import DiningPage from "../components/DiningPage";
-import AboutPage from "../components/Info/AboutPage";
-import ContactPage from "../components/Info/ContactPage";
-import Room from "../components/Hotel/Room";
-import Menu from "../components/CafeGrille/Menu";
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NotFoundPage from '../components/NotFoundPage';
+
+import Header from '../components/Header';
+import App from '../firebaselogin/App';
+import LandingPage from '../components/LandingPage';
+import ShopPage from '../components/ShopPage';
+import HotelPage from '../components/HotelPage';
+import DiningPage from '../components/DiningPage';
+import BlogPage from '../components/Post/components/BlogPage';
+import AboutPage from '../components/Info/AboutPage';
+import ContactPage from '../components/Info/ContactPage';
+import Room from '../components/Hotel/Room';
+import Menu from '../components/CafeGrille/Menu';
+import Clock from '../components/Clock/ClockDate';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
       <Switch>
-        <Route path="/" component={LandingPage} exact={true} />
+        <Route exact path="/app" component={App} />
         <Route path="/landing" component={LandingPage} />
         <Route path="/shop" component={ShopPage} />
         <Route path="/hotel" component={HotelPage} />
         <Route path="/dining" component={DiningPage} />
+        <Route path="/blog" component={BlogPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/room" component={Room} />
         <Route path="/menu" component={Menu} />
+        <Route path="/clock" component={Clock} />
 
         <Route component={NotFoundPage} />
       </Switch>

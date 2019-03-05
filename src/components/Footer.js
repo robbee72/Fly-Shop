@@ -1,5 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Clock from '../components/Clock/Clock';
 
 const Footer = () => (
   <footer className="footer">
@@ -16,6 +17,9 @@ const Footer = () => (
               <NavLink to="/contact" activeClassName="is-active">
                 CONTACT
               </NavLink>
+            </li>
+            <li>
+              <Clock />
             </li>
           </ul>
         </div>

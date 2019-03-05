@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
+import React, { Component } from 'react';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 class Addresses extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Addresses extends Component {
     this.state = {
       addresses: [
         {
-          label: " ",
+          label: ' ',
           jsx: () => {
             return (
               <div>
@@ -21,6 +21,8 @@ class Addresses extends Component {
                   onChange={val => this.selectCountry(0, val)}
                   priorityOptions={[`"US"`]}
                 />
+                <hr />
+
                 <RegionDropdown
                   country={this.getCountryValue(0)}
                   value={this.getRegionValue(0)}
@@ -31,9 +33,9 @@ class Addresses extends Component {
           },
           codeVisible: false,
           code:
-            "&lt;CountryDropdown\n  value={country}\n  onChange={selectCountry}\n  />\n&lt;RegionDropdown\n  country={country}\n  value={region}\n  onChange={selectRegion} />",
-          country: "United States",
-          region: ""
+            '&lt;CountryDropdown\n  value={country}\n  onChange={selectCountry}\n  />\n&lt;RegionDropdown\n  country={country}\n  value={region}\n  onChange={selectRegion} />',
+          country: 'select',
+          region: ''
         }
       ]
     };
@@ -72,7 +74,7 @@ class Addresses extends Component {
       return (
         <section key={i}>
           {address.jsx()}
-          <pre style={{ display: address.codeVisible ? "block" : "none" }}>
+          <pre style={{ display: address.codeVisible ? 'block' : 'none' }}>
             <code
               className="html"
               dangerouslySetInnerHTML={{ __html: address.code }}

@@ -1,5 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import BannerPage from '../components/LoginBanner';
 
 class Header extends React.Component {
   render() {
@@ -7,8 +8,12 @@ class Header extends React.Component {
       <header className="header">
         <div className="content-container">
           <div className="header__content">
-            <h1 className="header__title">Heaton Fly Shop</h1>
+            <h2 className="header__title"> Aspen Fly Shop </h2>
             <div>
+              <div>
+                <BannerPage />
+              </div>
+
               <ul>
                 <li>
                   <NavLink to="/landing" activeClassName="is-active">
@@ -28,6 +33,11 @@ class Header extends React.Component {
                 <li>
                   <NavLink to="/dining" activeClassName="is-active">
                     Dining
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/blog" activeClassName="is-active">
+                    Blog
                   </NavLink>
                 </li>
               </ul>

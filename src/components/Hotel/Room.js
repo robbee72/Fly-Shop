@@ -1,6 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 class Room extends React.Component {
   onSearchSubmit(term) {

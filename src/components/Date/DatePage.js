@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import DatePicker from "react-datepicker";
-import moment from "moment";
+import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
-import "react-datepicker/dist/react-datepicker.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-datepicker/dist/react-datepicker.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class DatePage extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class DatePage extends Component {
   handleSubmit(e) {
     e.preventDefault();
     let main = this.state.startDate;
-    console.log(main.format("L"));
+    console.log(main.format('L'));
   }
 
   render() {

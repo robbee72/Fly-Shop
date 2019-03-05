@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import BreakfastForm from "./MenuForm";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import BreakfastForm from './MenuForm';
 
 const BreakfastMenu = () => (
   <div className="box-lo__fm">
