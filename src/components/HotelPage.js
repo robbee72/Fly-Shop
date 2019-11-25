@@ -15,7 +15,9 @@ const HotelPage = () => (
               to="/room"
               activeClassName="is-active"
             >
-              <h3> Hotel Rooms</h3>
+              <div>
+                <h5> Hotel Rooms</h5>
+              </div>
             </NavLink>
           </li>
         </ul>

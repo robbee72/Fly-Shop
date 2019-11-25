@@ -1,76 +1,74 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+import { join } from 'path';
+import { DefinePlugin } from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-const config = {
-  context: __dirname,
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-  entry: './src/App.jsx',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, './public')
-  },
-  devtool: 'cheap-module-source-map',
-  resolve: {
-    extensions: ['.js', '.jsx', '.json']
-  },
-  stats: {
-    colors: true,
-    reasons: true,
-    chunks: true
-  },
-  plugins: [new ExtractTextPlugin('./bundle.css')],
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, './src')
-      },
-      {
-        test: /\.css$/,
-        exclude: [/\.global\./, /node_modules/],
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1,
-                modules: true,
-                autoprefixer: true,
-                minimize: true,
-                localIdentName: '[name]__[local]___[hash:base64:5]'
-              }
-            }
-          ]
-        })
-      },
-      {
-        test: /\.css/,
-        include: [/\.global\./, /node_modules/],
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1,
-                modules: false,
-                minimize: true
-              }
-            }
-          ]
-        })
-      }
-    ]
-  }
-};
-
-console.log('Packing for', process.env.NODE_ENV || 'development');
-
-if (process.env.NODE_ENV === 'production') {
-  config.devtool = 'source-map';
+if (process.env.NODE_ENV === 'test') {
+  require('dotenv').config({ path: '.env.test' });
+} else if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({ path: '.env.development' });
 }
 
-module.exports = config;
+export default env => {
+  const CSSExtract = new ExtractTextPlugin('styles.css');
+
+  return {
+    entry: './src/app.js',
+    output: {
+      path: join(__dirname, 'public', 'dist'),
+      filename: 'bundle.js'
+    },
+    module: {
+      rules: [
+        {
+          loader: 'babel-loader',
+          test: /\.js$/,
+          exclude: /node_modules/
+        },
+        {
+          test: /\.s?css$/,
+          use: CSSExtract.extract({
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true
+                }
+              }
+            ]
+          })
+        }
+      ]
+    },
+    plugins: [
+      CSSExtract,
+      new DefinePlugin({
+        'process.env.FIREBASE_API_KEY': JSON.stringify(
+          process.env.FIREBASE_API_KEY
+        ),
+        'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(
+          process.env.FIREBASE_AUTH_DOMAIN
+        ),
+        'process.env.FIREBASE_DATABASE_URL': JSON.stringify(
+          process.env.FIREBASE_DATABASE_URL
+        ),
+        'process.env.FIREBASE_PROJECT_ID': JSON.stringify(
+          process.env.FIREBASE_PROJECT_ID
+        ),
+        'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(
+          process.env.FIREBASE_STORAGE_BUCKET
+        ),
+        'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(
+          process.env.FIREBASE_MESSAGING_SENDER_ID
+        )
+      })
+    ]
+  };
+};

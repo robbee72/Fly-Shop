@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Addresses from '../Address/Addresses.js';
+import Select from 'react-select';
+import roomsSelect from './Roomdata.js';
 
 class Rooms extends Component {
   constructor(props) {
@@ -10,28 +11,12 @@ class Rooms extends Component {
     };
   }
 
-  // onUpdateItem = i => {
-  //   this.setState(state => {
-  //     const list = state.list.map((item, j) => {
-  //       if (j === i) {
-  //         return item + 1;
-  //       } else {
-  //         return item;
-  //       }
-  //     });
-
-  //     return {
-  //       list
-  //     };
-  //   });
-  // };
-
   render() {
     return (
       <div>
-        <ul>
-          <Addresses />
-        </ul>
+        <div className="col-md-2">
+          <Select options={roomsSelect} />
+        </div>
       </div>
     );
   }

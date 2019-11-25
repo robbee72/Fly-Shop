@@ -1,19 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import BannerPage from '../components/LoginBanner';
-
+//TODO  logout redirect to landing page and login
 class Header extends React.Component {
   render() {
     return (
       <header className="header">
+        <div>
+          <NavLink to="/logout" activeClassName="is-active">
+            Logout
+          </NavLink>
+        </div>
         <div className="content-container">
           <div className="header__content">
             <h2 className="header__title"> Aspen Fly Shop </h2>
             <div>
-              <div>
-                <BannerPage />
-              </div>
-
               <ul>
                 <li>
                   <NavLink to="/landing" activeClassName="is-active">
@@ -33,11 +33,6 @@ class Header extends React.Component {
                 <li>
                   <NavLink to="/dining" activeClassName="is-active">
                     Dining
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/blog" activeClassName="is-active">
-                    Blog
                   </NavLink>
                 </li>
               </ul>

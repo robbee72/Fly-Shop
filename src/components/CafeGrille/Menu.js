@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import BreakfastForm from './MenuForm';
 
 const BreakfastMenu = () => (
-  <div className="box-lo__fm">
-    <div className="fm-lo__header">Breakfast</div>
+  <div>
+    <div className="box-lo__fm">
+      <div className="fm-lo__header">Breakfast</div>
 
-    <div className="fm-lo__box">
-      <Link className="header__title" to="/" />
+      <div className="fm-lo__box">
+        <Link className="header__title" to="/" />
 
-      <BreakfastForm />
+        <BreakfastForm />
+      </div>
     </div>
   </div>
 );
