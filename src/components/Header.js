@@ -6,9 +6,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div>
-          <NavLink to="/logout" activeClassName="is-active">
-            Logout
-          </NavLink>
+          <h1>Auth account expired</h1>
         </div>
         <div className="content-container">
           <div className="header__content">

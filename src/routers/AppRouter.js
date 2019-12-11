@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NotFoundPage from '../components/NotFoundPage';
 
 import Header from '../components/Header';
-import Login from '../firebaselogin/Login';
 import LandingPage from '../components/LandingPage';
 import ShopPage from '../components/ShopPage';
 import HotelPage from '../components/HotelPage';
@@ -20,7 +19,7 @@ const AppRouter = () => (
     <div>
       <Header />
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/landing" component={LandingPage} />
         <Route path="/shop" component={ShopPage} />
         <Route path="/hotel" component={HotelPage} />
